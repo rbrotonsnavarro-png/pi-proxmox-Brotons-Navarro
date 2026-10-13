@@ -10,7 +10,7 @@ instalar y administrar un nodo Proxmox individual
 
 ## Modalidad
 
-individual
+Físico
 
 ## Indice de documentacion
 

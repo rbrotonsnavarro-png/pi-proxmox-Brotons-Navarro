@@ -30,8 +30,8 @@ individual
 
 ## Estado
 
-- [ ] GitHub creado y primer commit publicado
-- [ ] URL entregada y acceso docente comprobado
+- [x] GitHub creado y primer commit publicado
+- [x] URL entregada y acceso docente comprobado
 - [ ] Modalidad indicada
 - [ ] Inventario
 - [ ] Diagrama de red

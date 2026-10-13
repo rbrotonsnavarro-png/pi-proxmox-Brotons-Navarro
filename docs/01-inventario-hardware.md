@@ -1,86 +1,113 @@
 # Inventario investigado y viabilidad
 
-## Contexto de la observacion
+## 1. Contexto
 
-- Fecha y sistema utilizado: PENDIENTE.
-- Modalidad, equipo anfitrion y VM VirtualBox si procede: PENDIENTE.
-- Version de Proxmox prevista: PENDIENTE.
+- **Equipo analizado:** PC del aula.
+- **Sistema operativo:** GNU/Linux.
+- **Arquitectura:** x86-64.
+- **Versión del kernel:** 5.16.0-15-generic.
+- **Objetivo:** comprobar si el equipo puede utilizarse para instalar Proxmox VE y ejecutar las máquinas virtuales de la práctica.
 
-## Inventario inicial
+## 2. Inventario inicial del hardware
 
-| Area | Dato observado y evidencia | Especificacion y fuente | Limite o diferencia | Justificacion |
-|---|---|---|---|---|
-| CPU | | | | |
-| RAM | | | | |
-| Almacenamiento | | | | |
-| Red | | | | |
-| Plataforma | | | | |
+| Elemento | Información obtenida | Observaciones |
+|---|---|---|
+| CPU | Intel Pentium G4560 a 3,50 GHz | 2 núcleos y 4 hilos |
+| RAM | 8 GB DDR4 a 2400 MHz | Capacidad limitada para ejecutar varias máquinas virtuales |
+| Almacenamiento | `/dev/sda`, 465,8 GB | La capacidad libre y el modelo del disco están pendientes de comprobar |
+| Tarjeta de red | Realtek RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller (rev. 15) | Tarjeta de red Gigabit Ethernet |
+| Placa base | ASUS H110M-K | Modelo anotado en el equipo |
+| Gráficos | Intel HD Graphics 610 | Gráficos integrados |
+| Arquitectura | x86-64 | Compatible con sistemas operativos de 64 bits |
+| Virtualización por hardware | VT-x | - |
+| Firmware y arranque | Arranca en UEFI | - |
 
-## 1. Puedo instalar Proxmox en este equipo?
+### Información de red observada
 
-Contrastar el inventario con requisitos oficiales de la version prevista.
-Responder por separado y justificar con datos y fuentes:
+- `lo`: interfaz de loopback, con dirección `127.0.0.1/8`. `Unknown`
+- `etho`: interfaz cuya dirección anotada parece ser `192.168.122.1/24`, pero  `DOWN`.
+- `docker0`: interfaz asociada a Docker, con dirección `172.17.0.1/16`,  `DOWN`.
+- `virbr0`: interfaz de red virtual, con dirección anotada `172.18.0.1/16`. `DOWN`
 
-- Puedo instalar y arrancar Proxmox: PENDIENTE.
-- Puedo ejecutar el servidor ASO y el cliente del proyecto: PENDIENTE.
-- Condiciones o comprobaciones pendientes: PENDIENTE.
 
-## 2. Que limitaciones tendre con este hardware?
 
-Analizar RAM, CPU, disco y red para las cargas previstas. Identificar lo
-medido y lo estimado. En VirtualBox, investigar host real y VM: version,
-RAM reservada al anfitrion, vCPU, VDI, espacio fisico y red local.
-No se utiliza el Proxmox del centro como recurso.
+## 3. Viabilidad de instalar Proxmox VE
 
-### Reparto de recursos
+### ¿El procesador es compatible?
 
-| Elemento | CPU/vCPU | RAM | Disco | Justificacion |
-|---|---|---|---|---|
-| Proxmox | | | | |
-| srv-aso | | | | |
-| cli-linux | | | | |
-| Plantilla, ISOs y copias | No aplica | No aplica | | |
-| Margen de operacion | | | | |
+El equipo dispone de un Intel Pentium G4560 de 64 bits. Intel VT-x esté disponible y habilitada en UEFI 
 
-Mostrar calculos de RAM y disco, reparto de vCPU, unidades y supuestos.
-Explicar las cargas que pueden funcionar simultaneamente.
+### ¿La memoria RAM es suficiente?
 
-| Limitacion | Evidencia o estimacion | Consecuencia | Medida y limite que permanece |
-|---|---|---|---|
-| | | | |
+El equipo tiene 8 GB de RAM DDR4 a 2400 MHz. Esta cantidad permite plantear una práctica pequeña con pocas máquinas virtuales, pero limita la memoria disponible para Proxmox VE y los sistemas invitados. Será necesario asignar recursos de forma moderada.
 
-## 3. Que componentes son mas criticos en mi servidor y por que?
+### ¿El almacenamiento y la red son suficientes?
 
-Ordenar al menos tres componentes para este equipo y su servicio.
-Distinguir cuello de botella, disponibilidad e integridad de los datos.
+El disco anotado tiene una capacidad de 465,8 GB, por lo que, en principio, ofrece espacio para plantear la práctica. 
 
-| Prioridad y componente | Funcion | Efecto si es insuficiente | Efecto si falla | Evidencia y justificacion |
-|---|---|---|---|---|
-| 1. | | | | |
-| 2. | | | | |
-| 3. | | | | |
+El equipo dispone de una tarjeta de red Realtek Gigabit Ethernet. También es necesario verificar la conectividad real de la interfaz de red y su configuración.
 
-Componente que mejoraria primero y motivo para priorizarlo frente a otro:
-PENDIENTE.
+## 4. Reparto propuesto de recursos
 
-## Fuentes tecnicas
+La siguiente tabla es una propuesta inicial para una práctica pequeña, no una configuración que se haya aplicado al equipo.
 
-Consultar al menos tres fuentes primarias, incluyendo Proxmox y
-fabricante o plataforma virtual. Relacionarlas con las tres respuestas.
+| Elemento                         | CPU/vCPU                  | RAM prevista | Disco previsto | Justificación |
+| -------------------------------- | ------------------------- | ------------ | -------------- | ------------- |
+| Proxmox y sus servicios          | 2 núcleos compartidos     | 2 GB         | 20 GB          | Necesita recursos para el sistema anfitrión y la gestión de las máquinas virtuales. |
+| srv-aso                          | 2 vCPU                    | 2 GB         | 20 GB          | Permite realizar prácticas de administración de sistemas y servicios. |
+| cli-linux                        | 1 vCPU                    | 1,5 GB       | 16 GB          | Suficiente para tareas básicas de Linux y pruebas de conexión con el servidor. |
+| Plantilla, ISOs y copias locales | No aplica                 | No aplica    | 10 GB          | Reserva espacio para imágenes de instalación, plantillas y copias locales. |
+| Margen de operacion              | Recursos compartidos      | 2,5 GB       | Resto disponible | Permite absorber variaciones de consumo y deja espacio para futuras necesidades. |
 
-| Fuente y URL | Version/modelo y fecha de consulta | Afirmacion respaldada | Aplicacion al nodo |
-|---|---|---|---|
-| | | | |
+El reparto de RAM suma 8 GB. Por tanto, es una distribución ajustada: si el anfitrión necesita más memoria, habrá que reducir la asignada a las máquinas virtuales o ejecutar menos máquinas simultáneamente.
 
-## Dictamen de viabilidad
+Los discos virtuales propuestos suman 36 GB, sin contar las ISO, las plantillas ni el espacio que necesite Proxmox VE. Antes de instalar, se debe comprobar el espacio disponible en el disco físico.
 
-Apto, apto con condiciones o no apto para la propuesta actual: PENDIENTE.
+## 5. Limitaciones detectadas
 
-Sintetizar las tres respuestas y las condiciones pendientes de comprobar.
+| Limitación | Consecuencia | Posible solución |
+|---|---|---|
+| 8 GB de RAM | Limita el número de máquinas virtuales y la memoria que se les puede asignar | Ejecutar pocas máquinas a la vez y ajustar la RAM |
+| Procesador de 2 núcleos y 4 hilos | El rendimiento puede disminuir con varias máquinas virtuales simultáneas | Evitar cargas de trabajo elevadas |
 
-## Evidencias y revision docente
+## 6. Componentes críticos
 
-Enlazar salidas revisadas desde ../evidencias/. Un listado automatico no
-sustituye la investigacion. Registrar la pregunta de defensa y respuesta.
+| Componente | Importancia | Estado |
+|---|---|---|
+| CPU | Debe permitir la virtualización por hardware | Intel Pentium G4560|
+| RAM | Debe permitir ejecutar el anfitrión y las máquinas virtuales | 8 GB DDR4 a 2400 MHz |
+| Almacenamiento | Debe disponer de espacio suficiente para el sistema y las máquinas virtuales | Disco de 465,8 GB |
+| Red | Debe permitir la conectividad necesaria para la práctica | Tarjeta Realtek Gigabit Ethernet|
+| Firmware | Debe permitir configurar la virtualización por hardware | - |
+
+## 7. Fuentes técnicas
+
+| Fuente | Información consultada |
+|---|---|
+| [Requisitos oficiales de Proxmox VE](https://www.proxmox.com/en/products/proxmox-virtual-environment/requirements) | Requisitos de hardware y virtualización |
+| [Especificaciones de ASUS H110M-K](https://www.asus.com/motherboards-components/motherboards/prime/h110m-k/techspec/) | Información de la placa base |
+| [Lista de procesadores compatibles con ASUS H110M-K](https://www.asus.com/es/supportonly/h110m-k/helpdesk_cpu/) | Compatibilidad del procesador |
+| [Manual de VirtualBox](https://www.virtualbox.org/manual/ch10.html) | Información sobre virtualización por hardware |
+
+## 8. Veredicto de viabilidad
+
+**Viabilidad provisional: apto para una práctica pequeña, pendiente de comprobaciones.**
+
+El equipo dispone de un procesador de 64 bits, 8 GB de RAM, un disco de 465,8 GB y una tarjeta de red Gigabit Ethernet. En principio, estas características permiten plantear un entorno de virtualización sencillo.
+
+La memoria RAM es el principal límite para ejecutar varias máquinas virtuales al mismo tiempo. Por ello, se recomienda utilizar una configuración reducida y ajustar los recursos según las necesidades de la práctica.
+
+## 9. Evidencias y revisión
+
+Para completar el inventario, se pueden recoger estas evidencias desde la terminal de GNU/Linux:
+
+```bash
+lscpu
+free -h
+lsblk
+df -h
+ip -br addr
+ip route
+```
 
 [Volver al indice](../README.md)

@@ -6,9 +6,7 @@
 
 ## Comandos usados
 
-```bash
 
-```
 
 ## Evidencias
 

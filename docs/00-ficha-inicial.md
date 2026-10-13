@@ -2,11 +2,11 @@
 
 | Campo | Contenido |
 |---|---|
-| Identificador del alumno | PENDIENTE |
-| URL GitHub | PENDIENTE |
+| Identificador del alumno | Rubén Brotons Navarro |
+| URL GitHub | https://github.com/rbrotonsnavarro-png/pi-proxmox-Brotons-Navarro/blob/main/README.md |
 | Acceso docente comprobado | PENDIENTE |
-| Modalidad fisica o virtualizada | PENDIENTE |
-| Recursos conocidos | PENDIENTE |
+| Modalidad | fisica |
+| Recursos conocidos |  |
 | Nombre del nodo | PENDIENTE |
 | Servicio ASO previsto | PENDIENTE |
 | Red de laboratorio | PENDIENTE |

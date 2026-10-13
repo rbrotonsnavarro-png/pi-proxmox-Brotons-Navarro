@@ -6,7 +6,7 @@ URL GitHub: https://github.com/rbrotonsnavarro-png/pi-proxmox-Brotons-Navarro
 
 ## Objetivo
 
-PENDIENTE: explicar la necesidad que resolvera el laboratorio.
+instalar y administrar un nodo Proxmox individual
 
 ## Modalidad
 

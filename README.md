@@ -32,8 +32,8 @@ Físico
 
 - [x] GitHub creado y primer commit publicado
 - [x] URL entregada y acceso docente comprobado
-- [ ] Modalidad indicada
-- [ ] Inventario
+- [x] Modalidad indicada
+- [x] Inventario
 - [ ] Diagrama de red
 - [ ] Instalacion Proxmox
 - [ ] Plantilla Linux

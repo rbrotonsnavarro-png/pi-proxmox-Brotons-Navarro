@@ -2,7 +2,7 @@
 
 Alumno/a: Rubén-Brotons-Navarro
 
-URL GitHub: PENDIENTE
+URL GitHub: https://github.com/rbrotonsnavarro-png/pi-proxmox-Brotons-Navarro
 
 ## Objetivo
 
@@ -10,7 +10,7 @@ PENDIENTE: explicar la necesidad que resolvera el laboratorio.
 
 ## Modalidad
 
-PENDIENTE: fisica o virtualizada; justificar la eleccion.
+individual
 
 ## Indice de documentacion
 

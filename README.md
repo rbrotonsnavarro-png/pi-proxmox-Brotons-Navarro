@@ -34,7 +34,7 @@ Físico
 - [x] URL entregada y acceso docente comprobado
 - [x] Modalidad indicada
 - [x] Inventario
-- [ ] Diagrama de red
+- [x] Diagrama de red
 - [ ] Instalacion Proxmox
 - [ ] Plantilla Linux
 - [ ] VMs/LXC

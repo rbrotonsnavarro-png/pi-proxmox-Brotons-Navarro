@@ -23,7 +23,7 @@ La bitacora es el registro cronologico del trabajo. Se anade una entrada al fina
 - **Siguiente paso:** completar y revisar el inventario de hardware y preparar la instalacion de Proxmox, verificando los requisitos y la distribucion de recursos.
 
 
-## Sesion 02 - 13/10/2026
+## Sesion 03 - 20/10/2026
 
 - **Objetivo:** Realizar el diagrama de red
 - **Acciones realizadas:** he diseñado un diagrama de red para proxmox con ayuda de los apuntes 

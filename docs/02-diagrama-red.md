@@ -17,19 +17,19 @@ el servidor ASO y el cliente Linux de forma controlada.
 | Cliente | cli-linux | 192.168.56.34/24 | pruebas | VM |
 
 
-Nombre del nodo Proxmox: pve-brotons
-Interfaz de gestion: vmbr1
-Bridge de Proxmox: vmbr0
-Red o VLAN de laboratorio: 192.168.56.0/24
-IP del host en la red solo-anfitrión: 192.168.56.1/24.
-IP de administración de Proxmox: 192.168.56.10/24.
-IP del servidor ASO: 192.168.56.24/24.
-IP del cliente Linux: 192.168.56.34/24.
-Gateway de los invitados: 192.168.56.10
-Gateway de la interfaz NAT de Proxmox: 10.0.2.2.
-DNS: 10.0.2.3
-Puertos necesarios: 8006
-Medidas de aislamiento: red solo-anfitrión para la administración y comunicación del laboratorio, con una interfaz NAT separada para la salida exterior
+Nombre del nodo Proxmox: pve-brotons  
+Interfaz de gestion: vmbr1  
+Bridge de Proxmox: vmbr0  
+Red o VLAN de laboratorio: 192.168.56.0/24  
+IP del host en la red solo-anfitrión: 192.168.56.1/24.  
+IP de administración de Proxmox: 192.168.56.10/24.  
+IP del servidor ASO: 192.168.56.24/24.  
+IP del cliente Linux: 192.168.56.34/24.  
+Gateway de los invitados: 192.168.56.10  
+Gateway de la interfaz NAT de Proxmox: 10.0.2.2.  
+DNS: 10.0.2.3  
+Puertos necesarios: 8006  
+Medidas de aislamiento: red solo-anfitrión para la administración y comunicación del laboratorio, con una interfaz NAT separada para la salida exterior  
 
 
 ## 2. Diagrama de red
@@ -61,9 +61,8 @@ flowchart TD
     class A,B,C,D,E,F,G,H nodo
 ```
 
-## 3. Aislamiento y seguridad
-
 
 ## Conclusion
+Esta es la representación teórica del diseño de red
 
 [Volver al indice](../README.md)

@@ -16,14 +16,46 @@ el servidor ASO y el cliente Linux de forma controlada.
 | Servidor ASO | srv-aso | 192.168.56.24/24 | Servicio principal | VM |
 | Cliente | cli-linux | 192.168.56.34/24 | pruebas | VM |
 
-## 2. Diseño de red
 
-- Interfaz de gestión: PENDIENTE.
-- Bridge de Proxmox: vmbr0 (previsto).
-- Red de laboratorio: PENDIENTE.
-- Gateway: PENDIENTE.
-- DNS: PENDIENTE.
-- VLAN: PENDIENTE, si procede.
+Nombre del nodo Proxmox: vmbr0, vmbr1
+Interfaz de gestion: vmbr1
+Bridge de Proxmox: vmbr0
+Red o VLAN de laboratorio: 192.168.56.0/24
+IPs de las VMs/LXC: 192.168.56.24/24, 192.168.56.34/24
+Gateway: 10.0.2.2
+DNS: 10.0.2.3
+Puertos necesarios: 00560
+Medidas de aislamiento: NAT
+
+
+## 2. Diagrama de red
+
+```mermaid
+flowchart TD
+    A["Equipo del alumno<br/>LliureX y VirtualBox"]
+    B["Red solo-anfitrión<br/>192.168.56.1"]
+    C["Proxmox vmbr1<br/>192.168.56.10"]
+    D["cli-linux · .30"]
+    E["srv-aso · .20"]
+    F["Proxmox vmbr0 · 10.0.2.15"]
+    G["NAT VirtualBox · 10.0.2.2"]
+    H["Salida autorizada del equipo"]
+
+    A --> B
+    B --> C
+
+    C --> D
+    C -->|Enrutamiento y NAT del nodo| F
+    C --> E
+
+    D -->|Samba| E
+
+    F --> G
+    G --> H
+
+    classDef nodo fill:#eef0ff,stroke:#7889ff,color:#334155,stroke-width:1px
+    class A,B,C,D,E,F,G,H nodo
+```
 
 ## 3. Aislamiento y seguridad
 

@@ -9,23 +9,27 @@ el servidor ASO y el cliente Linux de forma controlada.
 | Elemento | Nombre | IP | Función | Recursos |
 |---|---|---|---|---|
 |Interfaz solo-anfitrión del host| Host-only | 192.168.56.1/24 | Navegador, SSH y Ansible hacia el laboratorio | VM |
-| Nodo Proxmox Adaptador1 NAT | vmbr0 | 10.0.2.15/24 |   Red exterior | VM |
+| Proxmox Adaptador1 NAT | vmbr0 | 10.0.2.15/24 |   Red exterior | VM |
 | Gateway NAT de VirtualBox | - | 10.0.2.2  | Salida al exterior permitido | VM |
 | DNS NAT de VirtualBox | - | 10.0.2.3  | Resolución | VM |
-| Nodo Proxmox Adaptador2 | vmbr1 | 192.168.56.10/24 | Administración y gateway invitados | VM |
+| Proxmox Adaptador2 | vmbr1 | 192.168.56.10/24 | Administración y gateway invitados | VM |
 | Servidor ASO | srv-aso | 192.168.56.24/24 | Servicio principal | VM |
 | Cliente | cli-linux | 192.168.56.34/24 | pruebas | VM |
 
 
-Nombre del nodo Proxmox: vmbr0, vmbr1
+Nombre del nodo Proxmox: pve-brotons
 Interfaz de gestion: vmbr1
 Bridge de Proxmox: vmbr0
 Red o VLAN de laboratorio: 192.168.56.0/24
-IPs de las VMs/LXC: 192.168.56.24/24, 192.168.56.34/24
-Gateway: 10.0.2.2
+IP del host en la red solo-anfitrión: 192.168.56.1/24.
+IP de administración de Proxmox: 192.168.56.10/24.
+IP del servidor ASO: 192.168.56.24/24.
+IP del cliente Linux: 192.168.56.34/24.
+Gateway de los invitados: 192.168.56.10
+Gateway de la interfaz NAT de Proxmox: 10.0.2.2.
 DNS: 10.0.2.3
-Puertos necesarios: 00560
-Medidas de aislamiento: NAT
+Puertos necesarios: 8006
+Medidas de aislamiento: red solo-anfitrión para la administración y comunicación del laboratorio, con una interfaz NAT separada para la salida exterior
 
 
 ## 2. Diagrama de red
@@ -35,8 +39,8 @@ flowchart TD
     A["Equipo del alumno<br/>LliureX y VirtualBox"]
     B["Red solo-anfitrión<br/>192.168.56.1"]
     C["Proxmox vmbr1<br/>192.168.56.10"]
-    D["cli-linux · .30"]
-    E["srv-aso · .20"]
+    D["cli-linux · .34"]
+    E["srv-aso · .24"]
     F["Proxmox vmbr0 · 10.0.2.15"]
     G["NAT VirtualBox · 10.0.2.2"]
     H["Salida autorizada del equipo"]

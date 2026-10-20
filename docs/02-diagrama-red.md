@@ -3,14 +3,18 @@
 ## Objetivo
 Diseñar una red de laboratorio para conectar el nodo Proxmox,
 el servidor ASO y el cliente Linux de forma controlada.
-## Procedimiento
+
 ## 1. Tabla de direccionamiento
 
 | Elemento | Nombre | IP | Función | Recursos |
 |---|---|---|---|---|
-| Nodo Proxmox | pve-brotons | PENDIENTE | Hipervisor | Pendiente de confirmar |
-| Servidor ASO | srv-aso | PENDIENTE | Servicio principal | Pendiente de confirmar |
-| Cliente | cli-linux | PENDIENTE | Pruebas | Pendiente de confirmar |
+|Interfaz solo-anfitrión del host| Host-only | 192.168.56.1/24 | Navegador, SSH y Ansible hacia el laboratorio | VM |
+| Nodo Proxmox Adaptador1 NAT | vmbr0 | 10.0.2.15/24 |   Red exterior | VM |
+| Gateway NAT de VirtualBox | - | 10.0.2.2  | Salida al exterior permitido | VM |
+| DNS NAT de VirtualBox | - | 10.0.2.3  | Resolución | VM |
+| Nodo Proxmox Adaptador2 | vmbr1 | 192.168.56.10/24 | Administración y gateway invitados | VM |
+| Servidor ASO | srv-aso | 192.168.56.24/24 | Servicio principal | VM |
+| Cliente | cli-linux | 192.168.56.34/24 | pruebas | VM |
 
 ## 2. Diseño de red
 
@@ -21,25 +25,8 @@ el servidor ASO y el cliente Linux de forma controlada.
 - DNS: PENDIENTE.
 - VLAN: PENDIENTE, si procede.
 
-## 3. Puertos necesarios
+## 3. Aislamiento y seguridad
 
-Pendiente de concretar según el servicio ASO elegido.
-
-## 4. Aislamiento y seguridad
-
-- Utilizar únicamente redes y equipos autorizados.
-- Evitar exponer los servicios innecesariamente.
-- Restringir el acceso de administración.
-- No publicar contraseñas ni credenciales.
-
-
-
-## Comandos usados
-
-
-## Evidencias
-
-## Incidencias
 
 ## Conclusion
 

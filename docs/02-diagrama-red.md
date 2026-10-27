@@ -18,8 +18,8 @@ el servidor ASO y el cliente Linux de forma controlada.
 
 
 Nombre del nodo Proxmox: pve-brotons  
-Interfaz de gestion: vmbr1  
-Bridge de Proxmox: vmbr0  
+Interfaz de gestion: vmbr0  
+Bridge de Proxmox: vmbr1  
 Red o VLAN de laboratorio: 192.168.56.0/24  
 IP del host en la red solo-anfitrión: 192.168.56.1/24.  
 IP de administración de Proxmox: 192.168.56.10/24.  

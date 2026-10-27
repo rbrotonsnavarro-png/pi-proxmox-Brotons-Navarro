@@ -18,8 +18,8 @@ el servidor ASO y el cliente Linux de forma controlada.
 
 
 Nombre del nodo Proxmox: pve-brotons  
-Interfaz de gestion: vmbr0  
-Bridge de Proxmox: vmbr1  
+Interfaz de gestion: vmbr1  
+Bridge de Proxmox: vmbr0  
 Red o VLAN de laboratorio: 192.168.56.0/24  
 IP del host en la red solo-anfitrión: 192.168.56.1/24.  
 IP de administración de Proxmox: 192.168.56.10/24.  
@@ -38,10 +38,10 @@ Medidas de aislamiento: red solo-anfitrión para la administración y comunicaci
 flowchart TD
     A["Equipo del alumno<br/>LliureX y VirtualBox"]
     B["Red solo-anfitrión<br/>192.168.56.1"]
-    C["Proxmox vmbr1<br/>192.168.56.10"]
+    C["Proxmox vmbr0<br/>192.168.56.10"]
     D["cli-linux · .34"]
     E["srv-aso · .24"]
-    F["Proxmox vmbr0 · 10.0.2.15"]
+    F["Proxmox vmbr1 · 10.0.2.15"]
     G["NAT VirtualBox · 10.0.2.2"]
     H["Salida autorizada del equipo"]
 

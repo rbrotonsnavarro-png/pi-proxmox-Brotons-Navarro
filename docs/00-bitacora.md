@@ -36,6 +36,7 @@ La bitacora es el registro cronologico del trabajo. Se anade una entrada al fina
 - **Objetivo:** Instalar Proxomox
 - **Acciones realizadas:** he configurado la maquina virtual de proxmox con los pertinentes adaptadores de red señalados en la sesion anterior de diagrama de red, la he ejecutado una vez puesta a punto y he instalado proxmox [Diagrama de red](02-diagrama-red.md)
 - **Documentos o evidencias:** [Instalacion de proxmox](03-instalacion-proxmox.md) y [ficha inicial](00-ficha-inicial.md).
+- **Incidencias y solucion o estado pendiente:** Queda pendiente entrar en el panel proxmox, hacer capturas y ejecutar los comandos pertinentes para las evidencias
 - **Siguiente paso:** Acabar la instalacion de proxmox
 
 [Volver al indice](../README.md)

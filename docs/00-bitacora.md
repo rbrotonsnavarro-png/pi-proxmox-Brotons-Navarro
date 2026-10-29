@@ -27,8 +27,15 @@ La bitacora es el registro cronologico del trabajo. Se anade una entrada al fina
 
 - **Objetivo:** Realizar el diagrama de red
 - **Acciones realizadas:** he diseñado un diagrama de red para proxmox con ayuda de los apuntes 
-- **Documentos o evidencias:** [Inventario de hardware](02-diagrama-red.md) y [ficha inicial](00-ficha-inicial.md).
+- **Documentos o evidencias:** [Diagrama de red](02-diagrama-red.md) y [ficha inicial](00-ficha-inicial.md).
 - **Siguiente paso:** Instalación del proxmox en la máquina virtual
 
+
+## Sesion 04 - 27/10/2026
+
+- **Objetivo:** Instalar Proxomox
+- **Acciones realizadas:** he configurado la maquina virtual de proxmox con los pertinentes adaptadores de red señalados en la sesion anterior de diagrama de red, la he ejecutado una vez puesta a punto y he instalado proxmox [Diagrama de red](02-diagrama-red.md)
+- **Documentos o evidencias:** [Inventario de hardware](03-instalacion-proxmox.md) y [ficha inicial](00-ficha-inicial.md).
+- **Siguiente paso:** Acabar la instalacion de proxmox
 
 [Volver al indice](../README.md)

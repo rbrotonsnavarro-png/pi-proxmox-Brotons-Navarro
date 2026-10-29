@@ -3,17 +3,9 @@
 ## Objetivo
 
 ## Procedimiento
-9. Fase 3. Instalacion de Proxmox¶
-Si usas nodo fisico¶
+9. Fase 3. Instalacion de Proxmox
 
-    Activa virtualizacion en BIOS/UEFI.
-    Prepara el medio de instalacion autorizado por el profesor.
-    Instala Proxmox sobre el disco del equipo.
-    Configura hostname, IP de gestion, gateway y DNS.
-    Accede a la interfaz web desde otro equipo.
-    Actualiza el sistema siguiendo el repositorio indicado por el profesor.
-
-Si usas Proxmox virtualizado¶
+Para Proxmox virtualizado
 
     Abre VirtualBox en tu equipo y registra su version.
     Crea una VM Linux de 64 bits para Proxmox con CPU, RAM y VDI del diseno.
@@ -27,17 +19,12 @@ Si usas Proxmox virtualizado¶
 Evidencias:
 
     Captura del panel Proxmox.
-    
-
     Captura de red y almacenamiento.
     Salida de:
 
-hostnamectl
-ip
- -br addr
-pveversion
-df
- -h
+hostnamectl   
+ip -br addr    
+pveversion df -h  
 
 ## Comandos usados
 

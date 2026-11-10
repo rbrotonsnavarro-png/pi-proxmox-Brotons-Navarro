@@ -45,6 +45,6 @@ La bitacora es el registro cronologico del trabajo. Se anade una entrada al fina
 
 - **Objetivo:** Reinstalar proxmox y empezar a configurar la base del nodo
 - **Acciones realizadas:** He vuelto a instalar proxmox con una serie de mejoras que nos ha indicado el profesor, he vuelto a seguir el procedimiento del instalador proxmox hasta llegar a la terminal y ahi he dejado bien configuradas las interfaces de red vmbr0 y vmbr1 
-- **Documentos o evidencias:** [Instalacion de proxmox](03-instalacion-proxmox.md) y [ficha inicial](00-ficha-inicial.md) [evidencias](evidencias).
+- **Documentos o evidencias:** [Instalacion de proxmox](03-instalacion-proxmox.md) , [ficha inicial](00-ficha-inicial.md) y [evidencias](../evidencias).
 - **Siguiente paso:** Terminar la configuración base del nodo 
 [Volver al indice](../README.md)

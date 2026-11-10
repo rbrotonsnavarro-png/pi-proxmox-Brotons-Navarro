@@ -1,7 +1,7 @@
 # 03-instalacion-proxmox
 
 ## Objetivo
-
+Instalar proxmox y configurar la red
 ## Procedimiento
 
 

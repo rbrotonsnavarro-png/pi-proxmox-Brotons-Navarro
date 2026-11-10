@@ -39,4 +39,13 @@ La bitacora es el registro cronologico del trabajo. Se anade una entrada al fina
 - **Incidencias y solucion o estado pendiente:** Queda pendiente entrar en el panel proxmox, hacer capturas y ejecutar los comandos pertinentes para las evidencias
 - **Siguiente paso:** Acabar la instalacion de proxmox
 
+  
+## Sesion 05 - 10/11/2026
+
+
+- **Objetivo:** Reinstalar proxmox y empezar a configurar la base del nodo
+- **Acciones realizadas:** He vuelto a instalar proxmox con una serie de mejoras que nos ha indicado el profesor, he vuelto a seguir el procedimiento del instalador proxmox hasta llegar a la terminal y ahi he dejado bien configuradas las interfaces de red vmbr0 y vmbr1 
+- **Documentos o evidencias:** [Instalacion de proxmox](03-instalacion-proxmox.md) y [ficha inicial](00-ficha-inicial.md).
+- **Incidencias y solucion o estado pendiente:** 
+- **Siguiente paso:** Terminar la configuración base del nodo 
 [Volver al indice](../README.md)

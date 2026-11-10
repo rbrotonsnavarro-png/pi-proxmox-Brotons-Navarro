@@ -8,6 +8,16 @@ No incluir credenciales ni datos personales. Guardar ISOs, discos y
 backups en el almacenamiento autorizado y documentar su ubicacion y las
 pruebas de recuperacion en docs/08-copias-restauracion.md.
 
-<img width="1920" height="1080" alt="Screenshot_20261110_092930" src="https://github.com/user-attachments/assets/3a9747be-7d7c-4da2-9f58-870f83220f1b" />
+EVIDENCIAS INSTALACION PROXMOX
+
+
+<img width="1270" height="867" alt="Screenshot_20261027_092430" src="https://github.com/user-attachments/assets/2b85a325-e102-4b43-ab90-94935ae2bb62" />
+
+
+<img width="522" height="340" alt="Screenshot_20261110_092930" src="https://github.com/user-attachments/assets/a6568f36-5549-4894-802a-35af78bd634e" />
+
+<img width="641" height="165" alt="Screenshot_20261110_092930-2" src="https://github.com/user-attachments/assets/47cf1de9-5223-43eb-9724-ecf17eaf0449" />
+
+<img width="723" height="661" alt="Screenshot_20261110_094658" src="https://github.com/user-attachments/assets/8f18f28a-8b67-436c-a03c-8eb8c1b43cb6" />
 
 [Volver al indice](../README.md)

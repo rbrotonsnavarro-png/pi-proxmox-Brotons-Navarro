@@ -26,7 +26,7 @@ Para Proxmox virtualizado
 - Thin Pool: data.
 - Contenido: imagen del disco y contenedor.
 
-  Este almacenamiento permite guardar imágenes ISO, plantillas y copias de seguridad del laboratorio.
+  -Este almacenamiento permite guardar imágenes ISO, plantillas y copias de seguridad del laboratorio.
 
 2. Almacenamiento local
 
@@ -35,13 +35,13 @@ Para Proxmox virtualizado
 - Directorio: /var/lib/vz.
 - Contenido: plantillas de contenedor (entre otros posibles contenidos).
 
-  Este almacenamiento está destinado principalmente a los discos virtuales de las máquinas y los contenedores.
+  -Este almacenamiento está destinado principalmente a los discos virtuales de las máquinas y los contenedores.
 
 
-Almacenamiento	Capacidad	Utilizado	Disponible
-local	        30,2 GiB	4,2 GiB     24,6 GiB
-local-lvm	    32,7 GiB	0 GiB	    32,7 GiB
-
+| Almacenamiento | Capacidad | Utilizado | Disponible |
+|---|---|---|---|
+|local    | 30,2 GiB | 	4,2 GiB | 24,6 GiB |
+|local-lvm| 32,7 GiB |	0 GiB	| 32,7 GiB |
 
 
 ## Comandos usados

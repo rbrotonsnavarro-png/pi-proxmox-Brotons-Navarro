@@ -20,4 +20,12 @@ EVIDENCIAS INSTALACION PROXMOX (SESION 05)
 
 <img width="723" height="661" alt="Screenshot_20261110_094658" src="https://github.com/user-attachments/assets/8f18f28a-8b67-436c-a03c-8eb8c1b43cb6" />
 
+<img width="1920" height="1080" alt="Screenshot_20261117_083011" src="https://github.com/user-attachments/assets/8a38b3ff-a309-4ba8-bf28-ddc7f1fbfc97" />
+
+<img width="1920" height="1080" alt="Screenshot_20261117_084527" src="https://github.com/user-attachments/assets/ee772187-f335-4903-920a-5e5e6ee1d803" />
+
+
+
+
+
 [Volver al indice](../README.md)

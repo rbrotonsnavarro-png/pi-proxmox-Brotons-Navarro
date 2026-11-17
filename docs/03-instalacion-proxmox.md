@@ -16,7 +16,31 @@ Para Proxmox virtualizado
     Configurar IP de gestion, hostname y DNS; abrir el panel desde el navegador del mismo equipo anfitrion.
     Desplegar srv-aso y cli-linux dentro de Proxmox, no como dos VMs independientes de VirtualBox. Documentar la alternativa LXC si KVM anidado no esta disponible.
 
+## Configuración base del nodo
 
+1. Almacenamiento local-lvm
+
+- Tipo: LVM-Thin.
+- ID: local-lvm.
+- Grupo de volúmenes: pve.
+- Thin Pool: data.
+- Contenido: imagen del disco y contenedor.
+
+  Este almacenamiento permite guardar imágenes ISO, plantillas y copias de seguridad del laboratorio.
+
+2. Almacenamiento local
+
+- Tipo: Directorio.
+- ID: local.
+- Directorio: /var/lib/vz.
+- Contenido: plantillas de contenedor (entre otros posibles contenidos).
+
+  Este almacenamiento está destinado principalmente a los discos virtuales de las máquinas y los contenedores.
+
+
+Almacenamiento	Capacidad	Utilizado	Disponible
+local	        30,2 GiB	4,2 GiB     24,6 GiB
+local-lvm	    32,7 GiB	0 GiB	    32,7 GiB
 
 
 

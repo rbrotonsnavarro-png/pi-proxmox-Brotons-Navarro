@@ -47,45 +47,52 @@ Los criterios de aceptación son:
 ## Modalidad e inventario
 El equipo físico analizado dispone de las siguientes características:
 
-Elemento
-
-Características
-
-Procesador
-
-Intel Pentium G4560 a 3,50 GHz
-
-Núcleos e hilos
-
-2 núcleos y 4 hilos
-
-Memoria RAM
-
-8 GB DDR4 a 2400 MHz
-
-Almacenamiento
-
-Disco de aproximadamente 465,8 GB
-
-Tarjeta de red
-
-Realtek Gigabit Ethernet
-
-Placa base
-
-ASUS H110M-K
-
-Gráficos
-
-Intel HD Graphics 610
-
-Arquitectura
-
-x86-64
-
-Virtualización
-
-Intel VT-x
+<table>
+  <thead>
+    <tr>
+      <th>Elemento</th>
+      <th>Características</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Procesador</td>
+      <td>Intel Pentium G4560 a 3,50 GHz</td>
+    </tr>
+    <tr>
+      <td>Núcleos e hilos</td>
+      <td>2 núcleos y 4 hilos</td>
+    </tr>
+    <tr>
+      <td>Memoria RAM</td>
+      <td>8 GB DDR4 a 2400 MHz</td>
+    </tr>
+    <tr>
+      <td>Almacenamiento</td>
+      <td>Disco de aproximadamente 465,8 GB</td>
+    </tr>
+    <tr>
+      <td>Tarjeta de red</td>
+      <td>Realtek Gigabit Ethernet</td>
+    </tr>
+    <tr>
+      <td>Placa base</td>
+      <td>ASUS H110M-K</td>
+    </tr>
+    <tr>
+      <td>Gráficos</td>
+      <td>Intel HD Graphics 610</td>
+    </tr>
+    <tr>
+      <td>Arquitectura</td>
+      <td>x86-64</td>
+    </tr>
+    <tr>
+      <td>Virtualización</td>
+      <td>Intel VT-x</td>
+    </tr>
+  </tbody>
+</table>
 
 La principal limitación del equipo es la memoria RAM, ya que dispone de solamente 8 GB. Por este motivo, es necesario controlar los recursos asignados a Proxmox y a las máquinas virtuales.
 
@@ -98,69 +105,60 @@ Se ha diseñado una red utilizando dos adaptadores de red en la máquina virtual
 
 El direccionamiento utilizado es el siguiente:
 
-Elemento
-
-Interfaz o nombre
-
-Dirección IP
-
-Función
-
-Equipo anfitrión
-
-Host-only
-
-192.168.56.1/24
-
-Administración
-
-Proxmox
-
-vmbr0
-
-10.0.2.15/24
-
-Salida al exterior
-
-Proxmox
-
-vmbr1
-
-192.168.56.10/24
-
-Administración y red interna
-
-Gateway NAT
-
--
-
-10.0.2.2
-
-Salida al exterior
-
-DNS NAT
-
--
-
-10.0.2.3
-
-Resolución de nombres
-
-Servidor ASO
-
-srv-aso
-
-192.168.56.24/24
-
-Servicios
-
-Cliente Linux
-
-cli-linux
-
-192.168.56.34/24
-
-Pruebas
+<table>
+  <thead>
+    <tr>
+      <th>Elemento</th>
+      <th>Interfaz o nombre</th>
+      <th>Dirección IP</th>
+      <th>Función</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Equipo anfitrión</td>
+      <td>Host-only</td>
+      <td>192.168.56.1/24</td>
+      <td>Administración</td>
+    </tr>
+    <tr>
+      <td>Proxmox</td>
+      <td>vmbr0</td>
+      <td>10.0.2.15/24</td>
+      <td>Salida al exterior</td>
+    </tr>
+    <tr>
+      <td>Proxmox</td>
+      <td>vmbr1</td>
+      <td>192.168.56.10/24</td>
+      <td>Administración y red interna</td>
+    </tr>
+    <tr>
+      <td>Gateway NAT</td>
+      <td>-</td>
+      <td>10.0.2.2</td>
+      <td>Salida al exterior</td>
+    </tr>
+    <tr>
+      <td>DNS NAT</td>
+      <td>-</td>
+      <td>10.0.2.3</td>
+      <td>Resolución de nombres</td>
+    </tr>
+    <tr>
+      <td>Servidor ASO</td>
+      <td>srv-aso</td>
+      <td>192.168.56.24/24</td>
+      <td>Servicios</td>
+    </tr>
+    <tr>
+      <td>Cliente Linux</td>
+      <td>cli-linux</td>
+      <td>192.168.56.34/24</td>
+      <td>Pruebas</td>
+    </tr>
+  </tbody>
+</table>
 
 El nombre del nodo Proxmox es pve-brotons y el puerto utilizado para acceder al panel de administración es el 8006.
 
@@ -177,23 +175,27 @@ Durante la instalación se ha establecido el nombre del nodo pve-brotons y se ha
 
 También se ha revisado la configuración de los almacenamientos disponibles:
 
-Almacenamiento
-
-Tipo
-
-Capacidad
-
-local
-
-Directorio
-
-30,2 GiB
-
-local-lvm
-
-LVM-Thin
-
-32,7 GiB
+<table>
+  <thead>
+    <tr>
+      <th>Almacenamiento</th>
+      <th>Tipo</th>
+      <th>Capacidad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>local</td>
+      <td>Directorio</td>
+      <td>30,2 GiB</td>
+    </tr>
+    <tr>
+      <td>local-lvm</td>
+      <td>LVM-Thin</td>
+      <td>32,7 GiB</td>
+    </tr>
+  </tbody>
+</table>
 
 El almacenamiento local utiliza el directorio /var/lib/vz, mientras que local-lvm utiliza el grupo de volúmenes pve y el Thin Pool data.
 

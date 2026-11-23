@@ -1,6 +1,6 @@
 # Proyecto Intermodular: nodo Proxmox individual
 
-Alumno/a: Rubén-Brotons-Navarro
+Alumno: Rubén-Brotons-Navarro
 
 URL GitHub: https://github.com/rbrotonsnavarro-png/pi-proxmox-Brotons-Navarro
 

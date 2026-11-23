@@ -24,7 +24,7 @@ Objetivo comprobable 3: desplegar máquinas virtuales y configurar servicios de 
 
 ## Alcance y criterios de aceptacion
 
-El proyecto incluye la instalación de Proxmox VE virtualizado mediante VirtualBox, la configuración de las interfaces de red, la preparación de los almacenamientos y el despliegue de máquinas virtuales para realizar prácticas de ASO.
+El proyecto incluye la instalación de Proxmox virtualizado mediante VirtualBox, la configuración de las interfaces de red, la preparación de los almacenamientos y el despliegue de máquinas virtuales para realizar prácticas de ASO.
 
 También se contempla la creación de una plantilla Linux, la instalación de servicios, la automatización de tareas mediante Bash y Ansible y la realización de copias de seguridad.
 
@@ -169,7 +169,7 @@ El diseño completo se encuentra en:
 
 ## Instalacion y configuracion de Proxmox
 
-Se ha instalado Proxmox VE dentro de una máquina virtual de VirtualBox, utilizando una imagen ISO y configurando previamente los adaptadores de red.
+Se ha instalado Proxmox dentro de una máquina virtual de VirtualBox, utilizando una imagen ISO y configurando previamente los adaptadores de red.
 
 Durante la instalación se ha establecido el nombre del nodo pve-brotons y se han configurado las interfaces de red vmbr0 y vmbr1 siguiendo el diseño realizado anteriormente.
 

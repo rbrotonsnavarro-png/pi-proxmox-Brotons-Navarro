@@ -48,3 +48,13 @@ La bitacora es el registro cronologico del trabajo. Se anade una entrada al fina
 - **Documentos o evidencias:** [Instalacion de proxmox](03-instalacion-proxmox.md) , [ficha inicial](00-ficha-inicial.md) y [evidencias](../evidencias).
 - **Siguiente paso:** Terminar la configuración base del nodo 
 [Volver al indice](../README.md)
+
+## Sesion 06 - 17/11/2026
+
+
+- **Objetivo:** Terminar la configuración de la base del nodo
+- **Acciones realizadas:** Se ha terminado la configuración de la base del nodo comprobando que se tiene una base estable antes de crear las máquinas
+- **Documentos o evidencias:** [Instalacion de proxmox](03-instalacion-proxmox.md) , [ficha inicial](00-ficha-inicial.md) y [evidencias](../evidencias).
+- **Incidencias y solucion o estado pendiente:** Queda pendiente aportar mas evidencias de esta última sesión y completar así el github del apartado
+- **Siguiente paso:** Crear la plantilla linux
+[Volver al indice](../README.md)

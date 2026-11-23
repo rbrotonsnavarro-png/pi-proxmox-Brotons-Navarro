@@ -8,7 +8,7 @@ No incluir credenciales ni datos personales. Guardar ISOs, discos y
 backups en el almacenamiento autorizado y documentar su ubicacion y las
 pruebas de recuperacion en docs/08-copias-restauracion.md.
 
-EVIDENCIAS INSTALACION PROXMOX (SESION 05)
+EVIDENCIAS INSTALACION PROXMOX (SESION 05/06)
 
 
 <img width="1270" height="867" alt="Screenshot_20261027_092430" src="https://github.com/user-attachments/assets/2b85a325-e102-4b43-ab90-94935ae2bb62" />
